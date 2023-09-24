@@ -1,0 +1,54 @@
+body {
+  padding: 16px;
+}
+
+p {
+  margin-top: 0.48em;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+
+i { font-style: italic;}
+
+.outer li {
+  color: olivedrab;
+}
+
+.outer > li {
+  color: dodgerblue;
+}
+
+.outer > li li {
+  text-decoration: underline;
+}
+
+.starter ~ li {
+  font-style: italic;
+}
+
+.starter + li {
+  font-weight: bold;
+}
+
+ol li:first-child,
+ol li:last-child {
+  color: yellowgreen;
+}
+
+li:hover {
+  font-weight: bold;
+  color: blue;
+}
+
+html { font-size: 24px;}
+div { font-size: 2rem;}
+
+p {
+  text-decoration: dotted underline;
+}
+
+em {
+  text-decoration: underline tomato;
+}
