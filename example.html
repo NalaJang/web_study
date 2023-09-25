@@ -76,21 +76,31 @@
       <!-- no-gutters : row 에 포함된 컬럼들의 좌우여백을 0으로 만든다. -->
       <div class="row no-gutters">
         <!-- 열의 합계는 행마다 최대 12개가 되어야 한다. 따라서 col-6 은 화면의 1/2을 차지한다. md 는 너비가 992px 이상인 화면에서 그리드를 이용해 레이아웃을 배치하겠다는 의미이다. -->
-        <div class="col-md-6">
+        <div class="col-md-6 roomsImage">
+          <!-- specialises title for mobile -->
           <h2>Yes we're geeks</h2>
+          <!-- specialises title -->
+          <div class="specialises-imgs-room1">
+            <img src="assets/img/Rooms.png" alt="Interior spaceship">
+          </div>
+        </div>
+
+        <div class="col-md-6 roomsText">
+          <div class="specialises-tab">
+            <h2>So we're geeks</h2>
+            <div>
+              <ul class="nav nav-tabs" role="tablist">
+                <!-- data-toggle : 모달 기능 수행 -->
+                <li><a href="#data" id="room1" role="tab" data-toggle="tab">Scientists</a></li>
+                <li><a href="#coding" id="room2" role="tab" data-toggle="tab">Programers</a></li>
+                <li><a href="#math" id="room3" role="tab" data-toggle="tab">Designers</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-
-    <div>
-      <h2>So we're geeks</h2>
-      <ul>
-        <li>Scientists</li>
-        <li>Programers</li>
-        <li>Designers</li>
-      </ul>
-    </div>
     
   </div>
 
