@@ -1,0 +1,189 @@
+/* Common CSS */
+body {
+  font-size: 13px;
+  /* font-family: 'Gilroy'; */
+  font-weight: 400;
+  /* overflow : 내용이 박스보다 길 때 어떻게 보이게 할 지 선택하는 속성
+  overflow-x 의 hidden : 가로의 내용이 더 길 때 스크롤이 생긴다.*/
+  overflow-x: hidden;
+  color: #000;
+  /* text-rendering : 자간 */
+  text-rendering: optimizeLegibility;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+p {
+  color: rgba(102, 102, 102, .8);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 1.8px;
+}
+
+
+/* Scroll To Top */
+
+
+/* Navigation CSS */
+
+.desk-nav {
+  /* background: #fff;
+  height: 80px;
+  line-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998; */
+}
+
+/* inline-block : 여러 개의 요소들을 한 줄에 배치 */
+.nex-menu,
+.desk-nav ul {
+  margin: 0;
+  /* padding: 0; */
+  display: inline-block;
+  float: right;
+}
+
+.nex-menu ul {
+  display: inline-block;
+}
+
+.desk-nav ul.navbar-menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.desk-nav ul.navbar-menu li a {
+  /* display: inline-block; */
+  /* text 밑 줄 없애기 */
+  text-decoration: none;
+  /* cursor: pointer; */
+}
+
+.desk-nav a#brand {
+  /* text-transform: uppercase; */
+  /* float: left; */
+  /* font-weight: 800; */
+  /* font-size: 20px; */
+}
+
+/* Navigation Area */
+
+#brand img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#brand span {
+  margin-left: -25px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 72px;
+}
+
+.navbar-menu li a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-menu a {
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.96px;
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  background: #e49cba
+}
+
+/*======== Home Area ========*/
+html,
+body {
+  height: 100%;
+}
+
+.home-area {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 900px;
+  height: 100%;
+  padding-top: 80px;
+  background-size: cover;
+  background-position: bottom right;
+  background: #3a68a2;
+}
+
+.astronauts {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  width: 650px;
+  /* animation: ease-in-out infinite alternate; */
+}
+
+.fold-planet {
+  /* position: absolute;
+  bottom: 25vh;
+  right: 0px;
+  width: 650px; */
+}
+
+.fold-astronaut1 {
+  /* position: absolute;
+  bottom: 50px;
+  width: 20vw;
+  left: 0px;
+  animation: ease-in-out infinite alternate; */
+}
+
+.home h1 {
+  margin-top: 190px;
+  color: #ffffff;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 1.35px;
+}
+
+.home p {
+  max-width: 460px;
+  margin-top: 50px;
+  color: rgba(255, 255, 255, .8);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 1.8px;
+  margin-bottom: 40px;
+}
+
+.home a {
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.96px;
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  line-height: 60px;
+  background-size: 100% 100%;
+}
+
+/*======== Specialises Area ========*/
