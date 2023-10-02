@@ -126,7 +126,7 @@ body {
   padding-top: 80px;
   background-size: cover;
   background-position: bottom right;
-  background: #3a68a2;
+  /* background: #3a68a2; */
 }
 
 .astronauts {
@@ -285,4 +285,103 @@ body {
   line-height: 28px;
   letter-spacing: 1.8px;
   margin-bottom: 0;
+}
+
+/*======== We Do Area ========*/
+.what-we-do-area {
+  padding-top: 295px;
+  padding-bottom: 120px;
+  /* background-image: url("../img/shape-1.svg"); */
+  /* contain : 배경을 사용하는 요소를 크게 벗어나지 않는 최대 크기로 이미지를 확대 또는 축소(가로 세로 비율 유지)*/
+  background-size: contain;
+}
+
+.we-do-area {
+  padding-bottom: 150px;
+  max-width: 1000px;
+  /* margin: auto : content 를 제외하고 사용할 수 있는 여백(margin)을 모두 사용 */
+  margin-left: auto;
+  margin-right: auto;
+  /* clear : 사진 주위로 글자가 붙지 않게 하기 위함*/
+  /* both : 오른쪽 왼쪽의 float 값을 취소하도록 함 */
+  clear: both;
+}
+
+/* position: relative : 자기를 기준으로 배치 */
+.we-do-img {
+  position: relative;
+}
+
+/* position: absolute : 부모(조상) 요소를 기준점으로 배치 */
+/* position 으로부터 top 에서 얼만큼 떨어질 지 결정 */
+.we-do-img .second-img {
+  position: absolute;
+  top: 30px;
+  background-color: transparent;
+  left: 50%;
+  margin-left: -147PX;
+}
+
+.we-do-img.exploration-img .second-img {
+  margin-left: -200px;
+  top: 60px;
+}
+
+.we-do-area {
+  height: 1%;
+}
+
+.we-do-left {
+  float: left;
+  width: 515px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.we-do-right {
+  float: right;
+  width: calc(100% - 515px);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.we-do-left.pull-right {
+  float: right;
+}
+
+.pdl100 {
+  padding-left: 105px;
+}
+
+.we-do-title {
+  padding-bottom: 120px;
+}
+
+.we-do-title h6 {
+  color: #666666;
+}
+
+.we-do-title h2 {
+  color: #666666;
+}
+
+.we-do-text {
+  max-width: 350px;
+  padding-top: 88px;
+}
+
+.we-do-text h2 {
+  color: #666666;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 0.84px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.we-do-text p {
+  color: rgba(102, 102, 102, .8);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
 }
