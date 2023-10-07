@@ -677,3 +677,66 @@ body {
   background-size: 100% 100%;
   display: inline-block;
 }
+
+/*======== Footer Area ========*/
+/* float: right 요소를 오른쪽으로 띄운다. */
+.footer-text {
+  float: right;
+}
+
+.footer-text-title h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.42;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.footer-list ul {
+  /* list-style: none; */
+}
+
+.footer-list ul li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.footer-list ul li a {
+  height: 10px;
+  color: rgba(255,255,255,.6);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.33;
+}
+
+.footer-bottom {
+  margin-top: 120px;
+}
+
+.footer-bottom-left p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+}
+
+.footer-bottom-right {
+  float: right;
+}
+
+.footer-bottom-right a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  padding: 0 30;
+}
+
+.footer-area option {
+  /* color: #666666; */
+}
+
+.none{
+  display: none;
+}
