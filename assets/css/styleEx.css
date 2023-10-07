@@ -16,6 +16,20 @@ ul {
   margin: 0;
 }
 
+.title h6 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.title h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1.12px;
+  margin: 0;
+}
 
 p {
   color: rgba(102, 102, 102, .8);
@@ -29,29 +43,35 @@ p {
 /* Scroll To Top */
 
 
-/* Navigation CSS */
+/*======== Navigation CSS ========*/
+#justtify-block {
+  display: flex;
+  justify-content: space-between;
+}
 
 .desk-nav {
-  /* background: #fff;
+  background: #b36464;
   height: 80px;
   line-height: 80px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9998; */
+  /* z-index : 창의 배치 순서
+    숫자가 높을수록 가장 상단에 배치 */
+  z-index: 9998;
 }
 
 /* inline-block : 여러 개의 요소들을 한 줄에 배치 */
 .nex-menu,
 .desk-nav ul {
   margin: 0;
-  /* padding: 0; */
+  padding: 0;
   display: inline-block;
   float: right;
 }
 
-.nex-menu ul {
+.nex-menu {
   display: inline-block;
 }
 
@@ -68,13 +88,30 @@ p {
 }
 
 .desk-nav a#brand {
-  /* text-transform: uppercase; */
-  /* float: left; */
-  /* font-weight: 800; */
-  /* font-size: 20px; */
+  text-transform: uppercase;
+  float: left;
+  font-weight: 800;
+  font-size: 20px;
 }
 
-/* Navigation Area */
+.desk-nav button {
+  /* background: none;
+  width: 30px;
+  margin-top: 20px;
+  border: none;
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  display: none; */
+}
+
+/* inline-block : 여러 개의 요소들을 한 줄에 원하는 너비만큼 배치 */
+/* 이 요소를 적용하자 로고와 네비 메뉴들이 한 줄에 배치되었다. */
+#brand {
+  display: inline-block;
+}
+
+/*======== Navigation Area ========*/
 
 #brand img {
   display: inline-block;
@@ -126,7 +163,7 @@ body {
   padding-top: 80px;
   background-size: cover;
   background-position: bottom right;
-  /* background: #3a68a2; */
+  background: #3a68a2;
 }
 
 .astronauts {
@@ -274,7 +311,7 @@ body {
 
 /* Tab Content */
 .tab-content {
- margin-top: 25px;
+  margin-top: 25px;
 }
 
 .tab-content p {
@@ -385,3 +422,80 @@ body {
   font-weight: 300;
   line-height: 28px;
 }
+
+/*======== Team Area ========*/
+.team-area {
+  position: relative;
+  padding-top: 260px;
+  padding-bottom: 250px;
+}
+
+.team-area .container {
+  position: relative;
+  z-index: 100;
+}
+
+.team-background-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateY(50%);
+  animation: 15s ease-in-out infinite alternate;
+}
+
+.team-title {
+  margin-bottom: 80px;
+}
+
+.team-title h6,
+.team-title h2 {
+  color: #ffffff;
+}
+
+.team-link {
+  margin-top: 100px;
+}
+
+.team-link a {
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.96px;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  background-size: 100% 100%;
+  margin-bottom: 20px;
+}
+
+.single-team {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.single-team h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.84px;
+  margin: 30px 0;
+}
+
+.single-team p {
+  text-align: justify;
+  color: rgba(255, 255, 255, .8);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 1.8px;
+  margin-bottom: 0;
+}
+
+.skills {
+  margin-bottom: 30px;
+}
+
