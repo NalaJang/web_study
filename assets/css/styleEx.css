@@ -163,7 +163,7 @@ body {
   padding-top: 80px;
   background-size: cover;
   background-position: bottom right;
-  /* background: #3a68a2; */
+  background: #3a68a2;
 }
 
 .astronauts {
@@ -514,6 +514,21 @@ body {
   color: #666666;
 }
 
+.opportunity-button {
+  position: relative;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  background-color: #E79EBD;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-top: 30px;
+}
 /* Tooltip text */
 .tooltip {
   position: relative;
@@ -603,4 +618,62 @@ body {
   font-weight: 300;
   line-height: 28px;
   letter-spacing: 1.8px;
+}
+
+/*======== Contact Area ========*/
+.contact-area {
+  position: relative;
+  padding-top: 360px;
+  padding-bottom: 180px;
+  overflow-x: hidden;
+}
+
+.contact-cont {
+  margin-top: 10VH;
+  z-index: 10;
+}
+
+.ISS {
+  position: absolute;
+  top: 20VH;
+  width: 30VW;
+  right: 0px;
+  z-index: 9;
+  -webkit-animation: ISS 10s ease-in-out;
+  animation: ISS 10s ease-in-out infinite alternate;
+}
+
+.contact h2 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1.12px;
+  margin-bottom: 70px;
+}
+
+.contact h2 i {
+  border-bottom: 3px #E79EBD solid;
+}
+
+.contact h2 span {
+  color: #E79EBD;
+}
+
+/* .contact input {
+} */
+
+.contact button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  width: 170px;
+  height: 60px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.96px;
+  line-height: 60px;
+  background-size: 100% 100%;
+  display: inline-block;
 }
