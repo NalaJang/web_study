@@ -1,19 +1,48 @@
 /* Common CSS */
 body {
   font-size: 13px;
-  /* font-family: 'Gilroy'; */
   font-weight: 400;
   /* overflow : 내용이 박스보다 길 때 어떻게 보이게 할 지 선택하는 속성
   overflow-x 의 hidden : 가로의 내용이 더 길 때 스크롤이 생긴다.*/
   overflow-x: hidden;
   color: #000;
+  background-color: #ffffff;
   /* text-rendering : 자간 */
   text-rendering: optimizeLegibility;
+  /* antialiased : 폰트를 부드럽게 */
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
 }
 
 ul {
   padding: 0;
   margin: 0;
+}
+
+/* li,
+li:hover,
+a:hover,
+.btn,
+.btn:hover {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+} */
+
+a:hover {
+  /* text-decoration: none; */
+}
+
+img {
+  max-width: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .title h6 {
@@ -45,12 +74,16 @@ p {
 
 /*======== Navigation CSS ========*/
 #justtify-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .desk-nav {
-  background: #b36464;
+  background: #ffffff;
   height: 80px;
   line-height: 80px;
   position: fixed;
@@ -60,6 +93,9 @@ p {
   /* z-index : 창의 배치 순서
     숫자가 높을수록 가장 상단에 배치 */
   z-index: 9998;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /* inline-block : 여러 개의 요소들을 한 줄에 배치 */
@@ -81,10 +117,10 @@ p {
 }
 
 .desk-nav ul.navbar-menu li a {
-  /* display: inline-block; */
+  display: inline-block;
   /* text 밑 줄 없애기 */
   text-decoration: none;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .desk-nav a#brand {
@@ -95,14 +131,23 @@ p {
 }
 
 .desk-nav button {
-  /* background: none;
+  background: none;
   width: 30px;
   margin-top: 20px;
   border: none;
   float: right;
   display: inline-block;
   cursor: pointer;
-  display: none; */
+  display: none;
+}
+
+.desk-nav button span {
+  width: 30px;
+  height: 40px;
+  height: 2px;
+  background: #333;
+  display: block;
+  margin: 5px 0;
 }
 
 /* inline-block : 여러 개의 요소들을 한 줄에 원하는 너비만큼 배치 */
@@ -112,6 +157,13 @@ p {
 }
 
 /*======== Navigation Area ========*/
+.desk-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+}
 
 #brand img {
   display: inline-block;
@@ -134,6 +186,11 @@ p {
   font-weight: 600;
 }
 
+.navbar-menu li.active a,
+.navbar-menu li:hover a {
+  color: rgba(255, 255, 255, .5);
+}
+
 .contact-menu a {
   text-align: center;
   display: inline-block;
@@ -147,6 +204,13 @@ p {
   line-height: 50px;
   border-radius: 25px;
   background: #e49cba
+}
+
+.desk-nav {
+  background: rgba(45, 75, 145, 0);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 /*======== Home Area ========*/
@@ -171,23 +235,76 @@ body {
   bottom: 50px;
   right: 0px;
   width: 650px;
-  /* animation: ease-in-out infinite alternate; */
+  -webkit-animation: fold 15s ease-in-out infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: fold 15s ease-in-out infinite alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+/* webkit-keyframes : 애니메이션 재생 방향 */
+@-webkit-keyframes fold {
+  0%   {bottom:50px; right:0px;}
+  60%  {right:15px;}
+  100% {bottom:25px;}
+}
+  
+  /* Standard syntax */
+  @keyframes fold {
+  0%   {bottom:50px; right:0px;}
+  60%  {right:15px;}
+  100% {bottom:25px;}
 }
 
 .fold-planet {
-  /* position: absolute;
+  position: absolute;
   bottom: 25vh;
   right: 0px;
-  width: 650px; */
+  width: 650px;
 }
 
 .fold-astronaut1 {
-  /* position: absolute;
+  position: absolute;
   bottom: 50px;
   width: 20vw;
   left: 0px;
-  animation: ease-in-out infinite alternate; */
+  -webkit-animation: fold-astro1 8s ease-in-out infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: fold-astro1 8s ease-in-out infinite alternate;
 }
+
+.fold-astronaut2{
+  position: absolute;
+  bottom: 30vh;
+  right: 100px;
+  width: 20vw;
+  -webkit-animation: fold-astro2 15s ease-in-out infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: fold-astro2 15s ease-in-out infinite alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fold-astro1 {
+  0%   {bottom:50px; left:0px;}
+  60%  {left:40px;}
+  100% {bottom:90px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes fol-astro1 {
+  0%   {bottom:50px; left:0px;}
+  60%  {left:40px;}
+  100% {bottom:90px;}
+  }
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes fold-astro2 {
+  0%   {bottom:30vh; right:100px;}
+  60%  {right:150px;}
+  100% {bottom:25vh;}
+  }
+  
+  /* Standard syntax */
+  @keyframes fol-astro2 {
+  0%   {bottom:30vh; right:100px;}
+  60%  {right:150px;}
+  100% {bottom:25vh;}
+  }
 
 .home h1 {
   margin-top: 190px;
@@ -217,7 +334,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.96px;
   display: inline-block;
-  width: 160px;
+  width: 170px;
   height: 60px;
   line-height: 60px;
   background-size: 100% 100%;
@@ -226,7 +343,7 @@ body {
 /*======== Specialises Area ========*/
 
 .specialises-area {
-  /* padding: 100px 0 70px 0; */
+  padding: 100px 0 70px 0;
 }
 
 .specialises-imgs {
@@ -235,13 +352,14 @@ body {
   height: 400px;
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
-  /* top: 50%; */
+  top: 50%;
   position: relative;
+  transform: translateY(-50%);
 }
 
 .specialises-imgs img {
   margin-left: 0px;
-  /* max-width: none; */
+  max-width: none;
   transform: translateX(0px);
   transition: all 1s ease-in-out;
 }
@@ -288,12 +406,18 @@ body {
   padding: 0;
 }
 
+.tab-header .nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+
 .tab-header .nav-item a {
   border-bottom: 1px solid transparent;
-  transition-property: .3s;
-  /* color: rgba(102, 102, 102, .5);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: rgba(102, 102, 102, .5);
   font-size: 18px;
-  font-weight: 600; */
+  font-weight: 600;
 }
 
 .tab-header .nav-item:hover .nav-link,
@@ -330,7 +454,6 @@ body {
   padding-bottom: 120px;
   /* background-image: url("../img/shape-1.svg"); */
   /* contain : 배경을 사용하는 요소를 크게 벗어나지 않는 최대 크기로 이미지를 확대 또는 축소(가로 세로 비율 유지)*/
-  background-size: contain;
 }
 
 .we-do-area {
@@ -441,8 +564,23 @@ body {
   left: 0;
   z-index: 1;
   transform: translateY(50%);
-  animation: 15s ease-in-out infinite alternate;
+  -webkit-animation: iss 15s ease-in-out infinite alternate; /* Safari 4.0 - 8.0 */
+  animation: iss 15s ease-in-out infinite alternate;
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes iss {
+  0%   {left:-50px; top:55px;}
+  65%  {left:0px;}
+  100% {top:0px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes iss {
+  0%   {left:-50px; top:55px;}
+  65%  {left:0px;}
+  100% {top:0px;}
+  }
 
 .team-title {
   margin-bottom: 80px;
@@ -536,7 +674,7 @@ body {
 }
 
 .tooltip .tooltiptext {
-  /* visibility: hidden; */
+  visibility: hidden;
   width: 120px;
   background-color: black;
   color: #ffffff;
@@ -620,6 +758,26 @@ body {
   letter-spacing: 1.8px;
 }
 
+/*======== Case Study Area ========*/
+.case-study-right h2 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1.12px;
+  margin-bottom: 70px;
+}
+
+.case-study-right h3 {
+  margin-top: 150px;
+  columns: #666666;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+}
+
+.case-study-right p {
+  max-width: 460px;
+}
 /*======== Contact Area ========*/
 .contact-area {
   position: relative;
@@ -642,6 +800,20 @@ body {
   -webkit-animation: ISS 10s ease-in-out;
   animation: ISS 10s ease-in-out infinite alternate;
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes ISS {
+  0%   {transform: translate(0%,0%);}
+  50%  {transform: translate(10%,5%);}
+  100% {transform: translate(12.5%,9%);}
+  }
+  
+  /* Standard syntax */
+  @keyframes ISS {
+  0%   {transform: translate(0%,0%);}
+  50%  {transform: translate(10%,5%);}
+  100% {transform: translate(12.5%,9%);}
+  }
 
 .contact h2 {
   color: #ffffff;
@@ -731,12 +903,4 @@ body {
   font-weight: 600;
   letter-spacing: 0.14px;
   padding: 0 30;
-}
-
-.footer-area option {
-  /* color: #666666; */
-}
-
-.none{
-  display: none;
 }
